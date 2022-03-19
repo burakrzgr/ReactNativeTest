@@ -1,4 +1,4 @@
 # TestCamera
 Start with 
-Cd main-folder
+Cd [main-folder]
 Expo start
