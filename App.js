@@ -1,10 +1,10 @@
-import Clipboard from '@react-native-community/clipboard';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import MyBarcodeScanner from './component/BarcodeScanner';
 import ExpoCamera from './component/ExpoCamera';
 import MyButton from './component/MyButton';
+import * as Clipboard from 'expo-clipboard';
 
 export default function App() {
   [activity, setActivity] = useState(0);
