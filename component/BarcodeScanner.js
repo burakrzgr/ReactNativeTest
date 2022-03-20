@@ -37,8 +37,8 @@ export default function MyBarcodeScanner({scanValue ,setScanValue,closeScan}) {
       {scanned && 
         <>
           <Text style={{flexDirection: 'column',justifyContent: "center", alignItems: "center",backgroundColor: "#747574",margin:5,padding:5}}>{scanValue.type} - {scanValue.data}</Text>
-          <MyButton text="Accept Value" onPress={() => closeScan()} style={{opacity:0.5}} ></MyButton>
-          <MyButton text='Tap to Scan Again' onPress={() => setScanned(false)}  style={{opacity:0.5}}  />
+          <MyButton text="Accept Value" onPress={() => closeScan()} style={{opacity:0.7}} ></MyButton>
+          <MyButton text='Tap to Scan Again' onPress={() => setScanned(false)}  style={{opacity:0.7}}  />
         </>
       }
       <MyButton text="Close" onPress={() => { setScanValue({type:undefined,data:undefined});closeScan()}} style={styles.bottomButton} ></MyButton>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
   },
   bottomButton : 
     {
-        opacity:0.5,
+        opacity:0.7,
         position:"absolute",
         right:10,
         left:10,
