@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@react-native-community/clipboard": "^1.5.1",
     "expo": "~44.0.2",
     "expo-av": "^10.2.1",
     "expo-barcode-scanner": "~11.2.0",

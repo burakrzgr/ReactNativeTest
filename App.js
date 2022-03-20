@@ -1,3 +1,4 @@
+import Clipboard from '@react-native-community/clipboard';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
@@ -14,15 +15,15 @@ export default function App() {
         <>
           <Text style={styles.text}>We are doing some camera work!</Text>
           <MyButton onPress={() => setActivity(1)} text="Click Me! I will open camera!"></MyButton>
-          <MyButton onPress={() => setActivity(2)} text="I will scan something!" style={{ backgroundColor: "#c4f574"}} textStyle={{color:"#5e9220",opacity:1}}></MyButton>
-          {scanValue.data ? <Text style={styles.text}>I Read : {scanValue.data}</Text> :<></>}
+          <MyButton onPress={() => setActivity(2)} text="I will scan something!" style={{ backgroundColor: "#c4f574"}} textStyle={{color:"#5e9220"}}></MyButton>
+          {scanValue.data ? 
+            <>
+              <Text style={styles.text}>I Read : {scanValue.data}</Text> 
+              <MyButton onPress={() => Clipboard.setString(scanValue.data)} text="Copy to Clipboard" style={{ backgroundColor: "#ef552d"}} textStyle={{color:"#ffffff"}}></MyButton>
+            </>:<></>}
         </> : <></>}
       {activity === 1 ? <ExpoCamera closeCamera={() => setActivity(0)}></ExpoCamera> : <></>}
-      {activity === 2 ? 
-        <>
-          <MyBarcodeScanner scanValue={scanValue} setScanValue={setScanValue} closeScan={() => setActivity(0)}></MyBarcodeScanner> 
-          <MyButton onPress={() => setActivity(2)} text="Copy to Clipboard" style={{ backgroundColor: "#ef552d"}} textStyle={{color:"#ffffff",opacity:1}}></MyButton>
-        </> : <></>}
+      {activity === 2 ? <MyBarcodeScanner scanValue={scanValue} setScanValue={setScanValue} closeScan={() => setActivity(0)}></MyBarcodeScanner>: <></>}
       <StatusBar style="auto" />
     </View>
   );
