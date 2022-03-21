@@ -1,17 +1,16 @@
 # TestCamera
 
+experimental project with expo and react-native
 
-# how to run
+## how to run
 
 Start with
 
-Cd [main-folder]
+### npm i
 
-npm i
+### Expo start
 
-Expo start
-
-# Testing
+## Testing
 
 install expo for android or ios 
 
