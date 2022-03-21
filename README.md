@@ -2,13 +2,13 @@
 
 experimental project with expo and react-native
 
-## how to run
+## How to run
 
 Start with
 
-### npm i
+### `npm i`
 
-### Expo start
+### `expo start`
 
 ## Testing
 
