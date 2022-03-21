@@ -1,5 +1,8 @@
 # TestCamera
 
+
+# how to run
+
 Start with
 
 Cd [main-folder]
